@@ -4,7 +4,7 @@
 }
 
 body {
-   margin: 30px 0;
+   margin: 40px 0;
 
    font-family: 'Poppins', sans-serif;
    font-weight: 200;
@@ -52,7 +52,7 @@ TEXTS
 
 .forgot-password {
    position: absolute;
-   top: 287px;
+   top: 293px;
    right: 35px;
 
    cursor: pointer;
@@ -81,6 +81,7 @@ FORM
    position: relative;
 
    width: 350px;
+   height: 500px;
    margin: 25px auto;
    padding: 50px 35px;
 
@@ -130,7 +131,11 @@ FORM
 
 /* BUTTONS */
 
-.signup-btn, .login-btn, .input-form input[type="submit"] {
+.signup-btn,
+.signup-btn-1,
+.login-btn,
+.login-btn-1,
+.input-form input[type="submit"] {
    display: inline-block;
 
    width: 50%;
@@ -150,26 +155,26 @@ FORM
    font-weight: 200;
 }
 
-.signup-btn {
+.signup-btn, .signup-btn-1 {
    margin-right: -3px;
 }
 
-.login-btn {
+.login-btn, .login-btn-1 {
    margin-left: -3px;
 }
 
-/* .login.btn:hover {
-   padding-left: -2px;
-} */
-
 .signup-btn:hover,
+.active:hover,
 .login-btn:hover,
 .input-form input[type="submit"]:hover {
    background-color: #13a178;
 }
 
 .signup-btn:active,
+.signup-btn-1:active,
+.active:active,
 .login-btn:active,
+.login-btn-1:active,
 .input-form input[type="submit"]:active {
    -webkit-transform: scale(0.95);
    transform: scale(0.95);
@@ -186,11 +191,11 @@ FORM
    background-color: #13a178;
 }
 
-.btn-off {
+.btn-off, .inactive {
    background-color: transparent;
 }
 
-.btn-off:hover {
+.btn-off:hover, .inactive:hover {
    background-color: #2d3537;
 }
 

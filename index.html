@@ -7,6 +7,8 @@
    <meta http-equiv="X-UA-Compatible" content="ie=edge">
    <link rel="stylesheet" href="styles.css">
    <link href="https://fonts.googleapis.com/css?family=Poppins:200,400" rel="stylesheet">
+   <script src="jquery-3.2.1.min.js"></script>
+   <script src="main.js"></script>
    <title>Sexy user interface forms</title>
 </head>
 
@@ -48,12 +50,17 @@
          </div>
       </div>
 
+      <!-- =====================
+      FOR JQUERY PURPOSE
+      TABLE ONE
+      ===================== -->
+
       <p class="title">Now with <span>JQuery</span></p>
 
-      <div class="form-container">
+      <div class="form-container table-1">
          <div class="input-form input-form-1">
-            <button class="signup-btn">Sign up</button>
-            <button class="login-btn btn-off">Log in</button>
+            <button class="signup-btn-1 active">Sign up</button>
+            <button class="login-btn-1 inactive">Log in</button>
             <p class="form-title">Sign up for free</p>
             <form action="">
                <input type="text" placeholder="First name *" required>
@@ -61,6 +68,22 @@
                <input type="email" placeholder="Email address *" required>
                <input type="password" placeholder="Create a password *" required>
                <input class="submit-btn" type="submit" value="Get started">
+            </form>
+         </div>
+      </div>
+
+      <!-- TABLE TWO -->
+
+      <div class="form-container table-2">
+         <div class="input-form input-form-2">
+            <button class="signup-btn-1 inactive">Sign up</button>
+            <button class="login-btn-1 active">Log in</button>
+            <p class="form-title">Welcome back</p>
+            <form action="">
+               <input type="email" placeholder="Email address *" required>
+               <input type="password" placeholder="Create a password *" required>
+               <p class="forgot-password forgot-password">Forgot password!</p>
+               <input class="submit-btn" type="submit" value="Log in">
             </form>
          </div>
       </div>
