@@ -19,47 +19,6 @@ html {
 }
 
 /* =====================
-TEXTS
-===================== */
-
-span {
-   font-weight: 400;
-}
-
-.title {
-   padding: 50px 0 25px 0;
-}
-
-.form-title {
-   padding-bottom: 15px;
-
-   font-size: 0.9rem;
-   font-weight: 400;
-}
-
-.form-request {
-   padding-bottom: 50px;
-
-   font-size: 0.8rem;
-}
-
-.forgot-password {
-   position: absolute;
-   top: 301px;
-   right: 35px;
-
-   cursor: pointer;
-
-   color: #04c188;
-
-   font-size: 0.7rem;
-}
-
-.forgot-password:hover {
-   color: #00b57e;
-}
-
-/* =====================
 BODY
 ===================== */
 
@@ -81,33 +40,175 @@ BODY
 }
 
 /* =====================
+TEXTS
+===================== */
+
+.title {
+   padding: 50px 0 25px 0;
+   grid-row: span 2;
+}
+
+.title span {
+   font-weight: 400;
+}
+
+.form-title {
+   margin: 30px 0;
+
+   text-align: center;
+
+   font-size: 1.3rem;
+}
+
+.forgot-password {
+   top: 287px;
+   right: 35px;
+   color: #28B089;
+   position: absolute;
+   cursor: pointer;
+   font-size: 0.7rem;
+}
+
+.forgot-password:hover {
+   color: #13a178;
+}
+
+/* =====================
 FORM
 ===================== */
 
 .form-container {
-   display: -webkit-box;
-   display: -ms-flexbox;
-   display: flex;
-   -webkit-box-align: center;
-   align-items: center;
-   -ms-flex-align: center;
-   -webkit-box-pack: center;
-   -ms-flex-pack: center;
-   justify-content: center;
-
-   margin-bottom: 80px;
+   display: grid;
+   grid-template-columns: repeat(2, 50%);
+   grid-template-rows: repeat(3, 100%);
 }
 
 .input-form {
+   grid-row: span 1;
+   grid-column: span 1;
    position: relative;
-
+   margin: 25px auto;
    width: 350px;
-   padding: 25px 35px;
+   padding: 50px 35px;
 
-   border: solid 1px #ececec;
+   color: white;
    border-radius: 5px;
-   background-color: #f6f6f6;
+   background-color: #2d3537;
 }
+
+/* INPUTS OF THE FORM */
+
+.input-form input[type="text"] {
+   width: 46%;
+}
+
+.input-form input[type="text"]:nth-child(1) {
+   margin-right: 17px;
+}
+
+.input-form input {
+   width: 100%;
+   height: 40px;
+   margin-bottom: 30px;
+   padding: 0 20px;
+
+   border: solid 1px #e2e2e2;
+   outline: none;
+   background-color: transparent;
+
+   font-family: 'Poppins', sans-serif;
+   font-weight: 200;
+}
+
+.input-form input::-webkit-input-placeholder {
+   color: #e2e2e2;
+}
+
+.input-form input:-ms-input-placeholder {
+   color: #e2e2e2;
+}
+
+.input-form input::placeholder {
+   color: #e2e2e2;
+}
+
+/* BUTTONS */
+
+.signup-btn, .login-btn, .input-form input[type="submit"] {
+   display: inline-block;
+
+   width: 50%;
+   height: 45px;
+   margin: 0;
+
+   cursor: pointer;
+
+   color: white;
+   border: none;
+   border: none;
+   outline: none;
+   background-color: #28B089;
+
+   font-family: 'Poppins', sans-serif;
+   font-size: 0.8rem;
+   font-weight: 200;
+}
+
+.signup-btn {
+   margin-right: -3px;
+}
+
+.login-btn {
+   margin-left: -3px;
+}
+
+/* .login.btn:hover {
+   padding-left: -2px;
+} */
+
+.signup-btn:hover,
+.login-btn:hover,
+.input-form input[type="submit"]:hover {
+   background-color: #13a178;
+}
+
+.signup-btn:active,
+.login-btn:active,
+.input-form input[type="submit"]:active {
+   -webkit-transform: scale(0.95);
+   transform: scale(0.95);
+}
+
+.input-form input[type="submit"] {
+   width: 100%;
+   margin-top: 0.7rem;
+
+   font-size: 1.2rem;
+}
+
+.input-form input[type="submit"]:hover {
+   background-color: #13a178;
+}
+
+.btn-off {
+   background-color: transparent;
+}
+
+.btn-off:hover {
+   background-color: #2d3537;
+}
+
+.input-form input[type="email"]:active,
+.input-form input[type="email"]:focus,
+.input-form input[type="password"]:active,
+.input-form input[type="password"]:focus,
+.input-form input[type="text"]:active,
+.input-form input[type="text"]:focus {
+   border-bottom: solid 2px #c1c1c1;
+   background-color: rgba(227, 227, 227, 0.1);
+}
+
+/* MOVING SLIDES BEHIND */
 
 .input-form::before, .input-form::after {
    position: absolute;
@@ -123,15 +224,9 @@ FORM
    content: "";
    -webkit-transition: all 0.3s ease;
    transition: all 0.3s ease;
-   -webkit-transform: scale(0.9) translate(0, 0);
-   transform: scale(0.9) translate(0, 0);
 
    border-radius: 5px;
-}
-
-.input-form::after {
-   -webkit-transition-delay: 0.05s;
-   transition-delay: 0.05s;
+   background-color: #2d3537;
 }
 
 .input-form:hover::before {
@@ -140,206 +235,16 @@ FORM
    -webkit-transform: scale(0.96) translate(0, 18px);
    transform: scale(0.96) translate(0, 18px);
 
-   border: solid 1px #e3e2e2;
-   background-color: #ebe9e9;
+   background-color: #393f41;
 }
 
 .input-form:hover::after {
    z-index: -2;
 
+   -webkit-transition-delay: 0.01s;
+   transition-delay: 0.01s;
    -webkit-transform: scale(0.92) translate(0, 36px);
    transform: scale(0.92) translate(0, 36px);
 
-   border: solid 1px #dbdbdb;
-   background-color: #e3e3e3;
-}
-
-/* =====================
-INPUTS INSIDE THE FORM
-===================== */
-
-.input-form input {
-   width: 100%;
-   height: 50px;
-   margin-bottom: 20px;
-   padding: 0 20px;
-
-   border: solid 1px #cdcdcd;
-   border-bottom: solid 2px #d0d0d0;
-   outline: none;
-   background-color: white;
-
-   font-family: 'Poppins', sans-serif;
-}
-
-.input-form input[type="submit"] {
-   margin-top: 20px;
-
-   cursor: pointer;
-   -webkit-transition: all 0.3s ease;
-   transition: all 0.3s ease;
-
-   background-color: #04c188;
-}
-
-.input-form input[type="submit"]:hover {
-   background-color: #00cb8e;
-   -webkit-box-shadow: none;
-   box-shadow: none;
-}
-
-.input-form input[type="submit"]:active {
-   background-color: #00cb8e;
-   -webkit-box-shadow: inset 1px 1px 1px grey,
-   inset -1px -1px 1px grey;
-   box-shadow: inset 1px 1px 1px grey,
-   inset -1px -1px 1px grey;
-}
-
-
-.input-form input[type="email"]:active,
-.input-form input[type="email"]:focus,
-.input-form input[type="password"]:active,
-.input-form input[type="password"]:focus {
-   border-bottom: solid 2px #c1c1c1;
-   background-color: #fafafa;
-}
-
-
-
-/* =============================
-
-USER INTERFACE FORM 2
-
-============================= */
-
-/* TEXTS */
-
-.form-title-2 {
-   margin: 30px 0;
-
-   text-align: center;
-
-   font-size: 1.3rem;
-}
-
-.forgot-password-2 {
-   top: 286px;
-   right: 35px;
-
-   color: #28B089;
-}
-
-.forgot-password-2:hover {
-   color: #13a178;
-}
-
-/* INPUTS OF THE FORM */
-
-.input-form-2 {
-   position: relative;
-
-   width: 350px;
-   padding: 50px 35px;
-
-   color: white;
-   border-radius: 5px;
-   background-color: #2d3537;
-}
-
-.input-form-2 input[type="text"] {
-   width: 46%;
-}
-
-.input-form-2 input[type="text"]:nth-child(1) {
-   margin-right: 17px;
-}
-
-.input-form-2 input {
-   width: 100%;
-   height: 40px;
-   margin-bottom: 30px;
-   padding: 0 20px;
-
-   border: solid 1px #e2e2e2;
-   outline: none;
-   background-color: transparent;
-
-   font-family: 'Poppins', sans-serif;
-   font-weight: 200;
-}
-
-.input-form-2 input::placeholder {
-   color: #e2e2e2;
-}
-
-/* BUTTONS */
-
-.signup-btn, .login-btn, .input-form-2 input[type="submit"] {
-   display: inline-block;
-
-   width: 50%;
-   height: 45px;
-   margin: 0;
-
-   cursor: pointer;
-
-   color: white;
-   border: none;
-   outline: none;
-   background-color: #28B089;
-
-   font-family: 'Poppins', sans-serif;
-   font-size: 0.8rem;
-   font-weight: 200;
-   border: none;
-}
-
-.signup-btn {
-   margin-right: -3px;
-}
-
-.login-btn {
-   margin-left: -3px;
-}
-
-.signup-btn:hover,
-.login-btn:hover,
-.input-form-2 input[type="submit"]:hover {
-   background-color: #13a178;
-}
-
-.signup-btn:active,
-.login-btn:active,
-.input-form-2 input[type="submit"]:active {
-   transform: scale(0.95);
-}
-
-.input-form-2 input[type="submit"] {
-   width: 100%;
-   margin-top: 0.7rem;
-
-   font-size: 1.2rem;
-}
-
-.input-form-2 input[type="submit"]:hover {
-   background-color: #13a178;
-}
-
-.btn-off {
-   background-color: transparent;
-}
-
-.btn-off:hover {
-   background-color: #2d3537;
-}
-
-.input-form-2 input[type="email"]:active,
-.input-form-2 input[type="email"]:focus,
-.input-form-2 input[type="password"]:active,
-.input-form-2 input[type="password"]:focus,
-.input-form-2 input[type="text"]:active,
-.input-form-2 input[type="text"]:focus {
-   border-bottom: solid 2px #c1c1c1;
-   background-color: rgba(227, 227, 227, 0.1);
+   background-color: #393f41;
 }
