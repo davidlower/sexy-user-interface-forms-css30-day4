@@ -94,6 +94,7 @@ FORM
    -webkit-box-pack: center;
    -ms-flex-pack: center;
    justify-content: center;
+
    margin-bottom: 80px;
 }
 
@@ -212,17 +213,35 @@ USER INTERFACE FORM 2
 
 ============================= */
 
+/* TEXTS */
+
 .form-title-2 {
-   font-size: 1.2rem;
-   text-align: center;
    margin: 30px 0;
+
+   text-align: center;
+
+   font-size: 1.3rem;
 }
+
+.forgot-password-2 {
+   top: 286px;
+   right: 35px;
+
+   color: #28B089;
+}
+
+.forgot-password-2:hover {
+   color: #13a178;
+}
+
+/* INPUTS OF THE FORM */
 
 .input-form-2 {
    position: relative;
 
    width: 350px;
-   padding: 25px 35px;
+   padding: 50px 35px;
+
    color: white;
    border-radius: 5px;
    background-color: #2d3537;
@@ -252,4 +271,75 @@ USER INTERFACE FORM 2
 
 .input-form-2 input::placeholder {
    color: #e2e2e2;
+}
+
+/* BUTTONS */
+
+.signup-btn, .login-btn, .input-form-2 input[type="submit"] {
+   display: inline-block;
+
+   width: 50%;
+   height: 45px;
+   margin: 0;
+
+   cursor: pointer;
+
+   color: white;
+   border: none;
+   outline: none;
+   background-color: #28B089;
+
+   font-family: 'Poppins', sans-serif;
+   font-size: 0.8rem;
+   font-weight: 200;
+   border: none;
+}
+
+.signup-btn {
+   margin-right: -3px;
+}
+
+.login-btn {
+   margin-left: -3px;
+}
+
+.signup-btn:hover,
+.login-btn:hover,
+.input-form-2 input[type="submit"]:hover {
+   background-color: #13a178;
+}
+
+.signup-btn:active,
+.login-btn:active,
+.input-form-2 input[type="submit"]:active {
+   transform: scale(0.95);
+}
+
+.input-form-2 input[type="submit"] {
+   width: 100%;
+   margin-top: 0.7rem;
+
+   font-size: 1.2rem;
+}
+
+.input-form-2 input[type="submit"]:hover {
+   background-color: #13a178;
+}
+
+.btn-off {
+   background-color: transparent;
+}
+
+.btn-off:hover {
+   background-color: #2d3537;
+}
+
+.input-form-2 input[type="email"]:active,
+.input-form-2 input[type="email"]:focus,
+.input-form-2 input[type="password"]:active,
+.input-form-2 input[type="password"]:focus,
+.input-form-2 input[type="text"]:active,
+.input-form-2 input[type="text"]:focus {
+   border-bottom: solid 2px #c1c1c1;
+   background-color: rgba(227, 227, 227, 0.1);
 }
