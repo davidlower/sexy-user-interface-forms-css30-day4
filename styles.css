@@ -149,6 +149,7 @@ FORM
    font-family: 'Poppins', sans-serif;
    font-size: 0.8rem;
    font-weight: 200;
+   -webkit-appearance: none;
 }
 
 .signup-btn, .signup-btn-1 {
