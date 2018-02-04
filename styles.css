@@ -17,7 +17,7 @@ BODY
 .container {
    position: relative;
    display: grid;
-
+   background-color: pink;
    width: 90%;
    max-width: 1000px;
    margin: 10% auto;
