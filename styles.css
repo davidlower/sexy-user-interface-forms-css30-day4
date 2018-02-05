@@ -246,6 +246,38 @@ FORM
    background-color: #393f41;
 }
 
+/* BOTTOM NAVIGATION */
+
+.navigation {
+   grid-column: span 2;
+   margin: 10% auto 0;
+   font-size: 2rem;
+}
+
+.navigation i {
+   padding-right: 30px;
+}
+
+.navigation i:last-child {
+   margin-right: 0;
+}
+
+.navigation i:hover {
+   color: #bbb9bb;
+   cursor: pointer;
+}
+
+.navigation i:active {
+   transform: translateY(1px);
+}
+
+a {
+   text-decoration: none;
+   color: #ebebeb;
+}
+
+/* MEDIA QUERIES */
+
 @media screen and (max-width: 850px) {
    .container {
       grid-template-columns: repeat(1, 1fr);
