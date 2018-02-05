@@ -254,20 +254,16 @@ FORM
    font-size: 2rem;
 }
 
-.navigation i {
-   padding-right: 30px;
+.navigation a:nth-child(2) {
+   padding: 0 30px;
 }
 
-.navigation i:last-child {
-   margin-right: 0;
-}
-
-.navigation i:hover {
+.navigation a:hover {
    color: #bbb9bb;
    cursor: pointer;
 }
 
-.navigation i:active {
+.navigation a:active {
    transform: translateY(1px);
 }
 
